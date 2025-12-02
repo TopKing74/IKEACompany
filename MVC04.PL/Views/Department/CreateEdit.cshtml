@@ -1,0 +1,17 @@
+﻿@using MVC04.PL.ViewModels.DepartmentVMs
+@model DepartmentVM
+
+<div class="form-group mb-3">
+    <label class="form-label" asp-for="Code"></label>
+    <input asp-for="Code" class="form-control" />
+    <span asp-validation-for="Code" class="text-danger"></span>
+</div>
+<div class="form-group mb-3">
+    <label class="form-label" asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group mb-3">
+    <label class="form-label" asp-for="Description"></label>
+    <textarea class="form-control" asp-for="Description" cols="12" rows="12"></textarea>
+</div>

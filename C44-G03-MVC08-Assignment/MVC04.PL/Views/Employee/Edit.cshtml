@@ -1,0 +1,31 @@
+﻿@using MVC04.DAL.Models.Department
+@using MVC04.PL.ViewModels.EmployeeVMs
+@model EmployeeVM
+@{
+    ViewData["Title"] = "Edit Employee Data";
+}
+<div class="card border border-primary">
+    <div class="card-header  bg-primary">
+        <h1 class="text-white">Edit Employee @Model.Name.</h1>
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+            <partial name="CreateEdit" model="@Model" />
+            <input hidden asp-for="ImageName" />
+                <div class="mt-4 m-auto">
+                <input class="btn btn-success" type="submit" value="Update" />
+                <a asp-action="Index" class="btn btn-outline-dark">Back to list</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Validation 
+{
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+
